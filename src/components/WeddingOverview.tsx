@@ -19,8 +19,9 @@ export const WeddingOverview = (): JSX.Element => {
             40 Shoreby Dr, Bratenahl, OH 44108
           </p>
           <img
-            className="mx-auto my-12 max-w-lg"
+            className="mx-auto my-12 sm:max-w-lg"
             src="/images/shoreby_club.jpg"
+            alt="The Shoreby Club"
           />
           <div className="my-10">
             <p className="font-square-peg italic max-w-xl mt-5 mx-auto text-l text-gray-500">
