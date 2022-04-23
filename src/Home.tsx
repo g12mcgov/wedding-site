@@ -2,6 +2,9 @@ import * as React from "react";
 
 import "./Home.css";
 import { WeddingOverview } from "./components/WeddingOverview";
+import { Divider } from "./components/Divider";
+import { WeddingParty } from "./components/WeddingParty";
+import { OurStory } from "./components/OurStory";
 
 export const Home = (): JSX.Element => {
   return (
@@ -22,7 +25,11 @@ export const Home = (): JSX.Element => {
           </h2>
         </div>
       </div>
+      <OurStory />
+      <Divider />
       <WeddingOverview />
+      <Divider />
+      <WeddingParty />
     </div>
   );
 };

@@ -34,6 +34,18 @@ export const Header = (): JSX.Element => {
               </div>
             </div>
           </div>
+          <Disclosure.Panel className="sm:hidden">
+            <div className="pt-2 pb-4 space-y-1">
+              <NavbarLink text="Our Wedding" route="/" />
+              <NavbarLink
+                text="Guest Accomodations"
+                route="/guest-accomodations"
+              />
+              <NavbarLink text="Details" route="/details" />
+              <NavbarLink text="Photography" route="/photography" />
+              <NavbarLink text="Registry" route="/registry" />
+            </div>
+          </Disclosure.Panel>
         </>
       )}
     </Disclosure>
