@@ -1,12 +1,11 @@
-import React from "react";
+import * as React from "react";
 
-import "./App.css";
-import { Header } from "./components/Header";
+import "./Home.css";
+import { WeddingOverview } from "./components/WeddingOverview";
 
-function App() {
+export const Home = (): JSX.Element => {
   return (
     <div>
-      <Header />
       <div
         className="bg-cover bg-center h-screen flex"
         style={{ backgroundImage: "url('proposal.jpg')" }}
@@ -23,8 +22,7 @@ function App() {
           </h2>
         </div>
       </div>
+      <WeddingOverview />
     </div>
   );
-}
-
-export default App;
+};
