@@ -8,7 +8,7 @@ export const Avatar = (props: Props): JSX.Element => {
     <div className="flex my-8 items-center justify-center">
       <div className="w-24">
         <img
-          className="mx-auto block h-20 w-20 rounded-full"
+          className="mx-auto block h-30 w-30 rounded-full"
           src={props.image}
           alt=""
         />

@@ -1,15 +1,20 @@
 export const WeddingOverview = (): JSX.Element => {
   return (
     <div className="bg-white">
-      <div className="max-w-7xl mx-auto pt-16 px-4 sm:pt-16 sm:px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto pt-16 px-4 sm:pt-16 sm:px-6 lg:px-8">
         <div className="text-center">
           <h1 className="my-10 mt-1 text-6xl font-square-peg text-slate-400 sm:text-6xl sm:tracking-tight lg:text-9xl">
             The Wedding
           </h1>
+          {/* <img
+            className="mx-auto my-12 sm:max-w-lg"
+            src="/images/lily_divider.png"
+            alt=""
+          /> */}
           <p className="font-square-peg max-w-xl mt-5 mx-auto text-3xl text-gray-500">
-            Attire: Semi-formal / Cocktail attire
+            Attire: Formal / Cocktail attire
           </p>
-          <h2 className="font-square-peg max-w-xl mt-5 mx-auto text-3xl text-gray-500">
+          <h2 className="font-square-peg max-w-xl mt-5 mx-auto text-4xl text-gray-500">
             Ceremony & Reception
           </h2>
           <p className="font-square-peg max-w-xl mt-5 mx-auto text-3xl text-gray-500">

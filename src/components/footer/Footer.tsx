@@ -42,7 +42,7 @@ export const Footer = (): JSX.Element => {
             >
               Grant
             </a>{" "}
-            (and Winston) in NYC
+            (and Winston)
           </p>
         </div>
       </div>

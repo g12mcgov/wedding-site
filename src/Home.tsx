@@ -5,6 +5,7 @@ import { WeddingOverview } from "./components/WeddingOverview";
 import { Divider } from "./components/Divider";
 import { WeddingParty } from "./components/WeddingParty";
 import { OurStory } from "./components/OurStory";
+import { Winston } from "./components/Winston";
 
 export const Home = (): JSX.Element => {
   return (
@@ -26,6 +27,7 @@ export const Home = (): JSX.Element => {
         </div>
       </div>
       <OurStory />
+      <Winston />
       <Divider />
       <WeddingOverview />
       <Divider />
