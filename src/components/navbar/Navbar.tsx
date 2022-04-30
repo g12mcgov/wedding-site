@@ -28,7 +28,7 @@ export const Navbar = (): JSX.Element => {
                     route="/guest-accomodations"
                   />
                   <NavbarLink text="Details" route="/details" />
-                  <NavbarLink text="Photography" route="/photography" />
+                  <NavbarLink text="Photography" route="/photos" />
                   <NavbarLink text="Registry" route="/registry" />
                 </div>
               </div>
@@ -42,7 +42,7 @@ export const Navbar = (): JSX.Element => {
                 route="/guest-accomodations"
               />
               <NavbarLink text="Details" route="/details" />
-              <NavbarLink text="Photography" route="/photography" />
+              <NavbarLink text="Photography" route="/photos" />
               <NavbarLink text="Registry" route="/registry" />
             </div>
           </Disclosure.Panel>

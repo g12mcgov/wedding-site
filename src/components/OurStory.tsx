@@ -3,7 +3,7 @@ import { Container } from "./Container";
 export const OurStory = (): JSX.Element => {
   return (
     <Container>
-      <>
+      <div className="px-4">
         <div className="text-center">
           <h1 className="my-10 mt-1 text-7xl font-square-peg text-[#b1c2d1] sm:text-6xl sm:tracking-tight lg:text-9xl">
             Our Story
@@ -25,7 +25,7 @@ export const OurStory = (): JSX.Element => {
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
         </div>
-      </>
+      </div>
     </Container>
   );
 };

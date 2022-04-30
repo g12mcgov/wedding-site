@@ -10,6 +10,7 @@ import { Details } from "./pages/Details";
 import { Navbar } from "./components/navbar/Navbar";
 import { Footer } from "./components/footer/Footer";
 import { ParallaxProvider } from "react-scroll-parallax";
+import { Photos } from "./pages/Photos";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -23,6 +24,7 @@ root.render(
           <Route path="/" element={<Home />} />
           <Route path="guest-accomodations" element={<GuestAccomodations />} />
           <Route path="details" element={<Details />} />
+          <Route path="photos" element={<Photos limit={10} />} />
         </Routes>
         <Footer />
       </BrowserRouter>
