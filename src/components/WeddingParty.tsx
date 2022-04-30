@@ -1,4 +1,5 @@
 import { Avatar } from "./Avatar";
+import { Container } from "./Container";
 
 const groomsmen = [
   {
@@ -57,17 +58,17 @@ const bridesmaids = [
 
 export const WeddingParty = (): JSX.Element => {
   return (
-    <div className="bg-white">
-      <div className="max-w-7xl mx-auto pt-16 px-4 sm:pt-16 sm:px-6 lg:px-8">
+    <Container>
+      <>
         <div className="text-center">
-          <h1 className="my-20 mt-1 text-6xl font-square-peg text-slate-400 sm:text-6xl sm:tracking-tight lg:text-9xl">
+          <h1 className="my-20 mt-1 text-6xl font-square-peg sm:text-6xl sm:tracking-tight lg:text-9xl">
             The Wedding Party
           </h1>
         </div>
         <div className="sm:flex flex-col justify-center items-center">
           <div className="w-500">
-            <div className="hidden md:flex justify-between text-3xl">
-              <h2 className="font-square-peg">Bridesmaids</h2>
+            <div className="hidden md:flex justify-between text-4xl">
+              <h2 className="font-square-peg">Bridemaids</h2>
               <h2 className="font-square-peg">Groomsmen</h2>
             </div>
             {groomsmen.map((groomsman, i) => (
@@ -81,7 +82,7 @@ export const WeddingParty = (): JSX.Element => {
             ))}
           </div>
         </div>
-      </div>
-    </div>
+      </>
+    </Container>
   );
 };

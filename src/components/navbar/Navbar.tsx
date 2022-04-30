@@ -1,8 +1,8 @@
 import { Disclosure } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
-import { NavbarLink } from "./navbar/NavbarLink";
+import { NavbarLink } from "./NavbarLink";
 
-export const Header = (): JSX.Element => {
+export const Navbar = (): JSX.Element => {
   return (
     <Disclosure as="nav" className="bg-white shadow">
       {({ open }) => (
@@ -35,7 +35,7 @@ export const Header = (): JSX.Element => {
             </div>
           </div>
           <Disclosure.Panel className="sm:hidden">
-            <div className="pt-2 pb-4 space-y-1">
+            <div className="flex flex-col pt-2 pb-4 space-y-1">
               <NavbarLink text="Our Wedding" route="/" />
               <NavbarLink
                 text="Guest Accomodations"

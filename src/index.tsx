@@ -7,7 +7,7 @@ import { Home } from "./Home";
 import reportWebVitals from "./reportWebVitals";
 import { GuestAccomodations } from "./pages/GuestAccomodations";
 import { Details } from "./pages/Details";
-import { Header } from "./components/Header";
+import { Navbar } from "./components/navbar/Navbar";
 import { Footer } from "./components/footer/Footer";
 import { ParallaxProvider } from "react-scroll-parallax";
 
@@ -18,7 +18,7 @@ root.render(
   <React.StrictMode>
     <ParallaxProvider>
       <BrowserRouter>
-        <Header />
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="guest-accomodations" element={<GuestAccomodations />} />

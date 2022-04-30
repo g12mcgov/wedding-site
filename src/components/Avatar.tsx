@@ -12,7 +12,7 @@ export const Avatar = (props: Props): JSX.Element => {
           src={props.image}
           alt=""
         />
-        <p className="text-center text-sm font-medium text-gray-700 group-hover:text-gray-900">
+        <p className="font-square-peg text-center text-3xl font-medium text-gray-400 group-hover:text-gray-900">
           {props.name}
         </p>
       </div>

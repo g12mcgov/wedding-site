@@ -11,7 +11,7 @@ export const NavbarLink = (props: Props): JSX.Element => {
       className={({ isActive }) =>
         `hover:border-gray-300 active:border-indigo-500 ${
           isActive ? "border-indigo-500" : "border-transparent"
-        } inline-flex items-center px-1 pt-1 border-b-2 text-2xl font-square-peg`
+        } inline-flex items-center px-1 pt-1 border-b-2 text-2xl font-square-peg max-w-max`
       }
       to={props.route}
     >
