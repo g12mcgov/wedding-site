@@ -8,7 +8,7 @@ const groomsmen = [
     subname: "(Best Man)",
   },
   {
-    name: "Phillip Werner",
+    name: "Philipp Werner",
     image: "/images/groomsmen/phil.jpeg",
   },
   {
@@ -59,30 +59,29 @@ const bridesmaids = [
 export const WeddingParty = (): JSX.Element => {
   return (
     <Container>
-      <>
+      <div className="px-4 text-[#a0bbd3] font-cormorant-garamond">
         <div className="text-center">
-          <h1 className="my-20 mt-1 text-6xl font-square-peg sm:text-6xl sm:tracking-tight lg:text-9xl">
+          <h1 className="my-20 mt-1 text-6xl sm:text-7xl sm:tracking-tight">
             The Wedding Party
           </h1>
         </div>
         <div className="sm:flex flex-col justify-center items-center">
-          <div className="w-500">
-            <div className="hidden md:flex justify-between text-4xl">
-              <h2 className="font-square-peg">Bridesmaids</h2>
-              <h2 className="font-square-peg">Groomsmen</h2>
+          <div className="gap-60 hidden sm:flex justify-between text-4xl">
+            <div className="w-24 text-center flex justify-center">
+              <h2>Bridesmaids</h2>
             </div>
-            {groomsmen.map((groomsman, i) => (
-              <div className="sm:flex gap-40">
-                <Avatar
-                  name={bridesmaids[i].name}
-                  image={bridesmaids[i].image}
-                />
-                <Avatar name={groomsman.name} image={groomsman.image} />
-              </div>
-            ))}
+            <div className="w-24 text-center flex justify-center">
+              <h2>Groomsmen</h2>
+            </div>
           </div>
+          {groomsmen.map((groomsman, i) => (
+            <div className="sm:flex gap-60">
+              <Avatar name={bridesmaids[i].name} image={bridesmaids[i].image} />
+              <Avatar name={groomsman.name} image={groomsman.image} />
+            </div>
+          ))}
         </div>
-      </>
+      </div>
     </Container>
   );
 };

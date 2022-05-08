@@ -36,14 +36,24 @@ export const Navbar = (): JSX.Element => {
           </div>
           <Disclosure.Panel className="sm:hidden">
             <div className="flex flex-col pt-2 pb-4 space-y-1">
-              <NavbarLink text="Our Wedding" route="/" />
-              <NavbarLink
-                text="Guest Accomodations"
-                route="/guest-accomodations"
-              />
-              <NavbarLink text="Details" route="/details" />
-              <NavbarLink text="Photography" route="/photos" />
-              <NavbarLink text="Registry" route="/registry" />
+              <Disclosure.Button>
+                <NavbarLink text="Our Wedding" route="/" />
+              </Disclosure.Button>
+              <Disclosure.Button>
+                <NavbarLink
+                  text="Guest Accomodations"
+                  route="/guest-accomodations"
+                />
+              </Disclosure.Button>
+              <Disclosure.Button>
+                <NavbarLink text="Details" route="/details" />
+              </Disclosure.Button>
+              <Disclosure.Button>
+                <NavbarLink text="Photography" route="/photos" />
+              </Disclosure.Button>
+              <Disclosure.Button>
+                <NavbarLink text="Registry" route="/registry" />
+              </Disclosure.Button>
             </div>
           </Disclosure.Panel>
         </>
