@@ -34,7 +34,7 @@ export const Image = (props: Props): JSX.Element => {
 
   const [open, setOpen] = useState<boolean>(false);
 
-  const allPhotos = getAllPhotoUrls(1, 4);
+  const allPhotos = getAllPhotoUrls();
 
   return (
     <>

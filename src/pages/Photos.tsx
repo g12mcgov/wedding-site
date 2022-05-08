@@ -1,8 +1,8 @@
 import * as React from "react";
 
 import { Image } from "../components/collage/Image";
-import { Transition } from "@headlessui/react";
 import { MoreButton } from "../components/collage/MoreButton";
+import { getAllPhotoUrls, shuffle } from "../helpers/photos";
 
 const { useState, useEffect } = React;
 
@@ -12,15 +12,7 @@ interface Props {
 
 export const Photos = (props: Props): JSX.Element => {
   const [photoIndex, setPhotoIndex] = useState<number>(1);
-  const [photos, setPhotos] = useState([
-    "/images/collage/1.jpg",
-    "/images/collage/2.jpg",
-    "/images/collage/3.jpg",
-    "/images/collage/4.jpg",
-    "/images/collage/5.jpg",
-    "/images/collage/6.jpg",
-    "/images/collage/7.jpg",
-  ]);
+  const [photos, setPhotos] = useState(shuffle(getAllPhotoUrls()));
 
   const generateRandomNumber = (min: number, max: number): number => {
     return Math.floor(Math.random() * (max - min + 1) + min);
@@ -36,7 +28,7 @@ export const Photos = (props: Props): JSX.Element => {
         index = 1;
       }
 
-      updatedPhotos[slot] = `/images/collage/${index}.jpg`;
+      updatedPhotos[slot] = `/images/collage/${index}.webp`;
       index++;
 
       setPhotos(updatedPhotos);
