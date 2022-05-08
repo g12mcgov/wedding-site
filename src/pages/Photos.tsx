@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import { Image } from "../components/collage/Image";
+import { Transition } from "@headlessui/react";
 import { MoreButton } from "../components/collage/MoreButton";
 
 const { useState, useEffect } = React;
@@ -25,31 +26,38 @@ export const Photos = (props: Props): JSX.Element => {
     return Math.floor(Math.random() * (max - min + 1) + min);
   };
 
-  //   useEffect(() => {
-  //     const interval = setInterval(() => {
-  //       const slot = generateRandomNumber(0, 3);
-  //       const updatedPhotos = [...photos];
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const slot = generateRandomNumber(0, 3);
+      const updatedPhotos = [...photos];
 
-  //       let index = photoIndex;
-  //       if (photoIndex === props.limit) {
-  //         index = 1;
-  //       }
+      let index = photoIndex;
+      if (photoIndex === props.limit) {
+        index = 1;
+      }
 
-  //       updatedPhotos[slot] = `/images/collage/${index}.jpg`;
-  //       index++;
+      updatedPhotos[slot] = `/images/collage/${index}.jpg`;
+      index++;
 
-  //       setPhotos([...updatedPhotos]);
-  //       setPhotoIndex(index);
-  //     }, 5000);
-  //     return () => clearInterval(interval);
-  //   }, [photos, photoIndex, props.limit]);
+      setPhotos(updatedPhotos);
+      setPhotoIndex(index);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [photos, photoIndex, props.limit]);
 
   return (
-    <div>
-      <Image className="flex bg-cover h-[600px] w-full" image={photos[0]} />
-      <div className="md:flex">
+    <>
+      <Image
+        className="animate-pulse flex bg-cover h-[600px] w-full"
+        image={photos[0]}
+      />
+      <div className="lg:flex">
         {photos.slice(1, 4).map((image, i) => (
-          <Image key={`image-${i}`} className="bg-cover w-full" image={image} />
+          <Image
+            className="animate-pulse bg-cover h-[500px] w-full"
+            key={`image-${i}`}
+            image={image}
+          />
         ))}
         <Image
           className="bg-cover h-[500px] w-full flex justify-center items-center brightness-50"
@@ -58,6 +66,6 @@ export const Photos = (props: Props): JSX.Element => {
           <MoreButton />
         </Image>
       </div>
-    </div>
+    </>
   );
 };

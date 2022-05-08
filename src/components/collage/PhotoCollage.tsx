@@ -13,7 +13,7 @@ export const PhotoCollage = (props: Props): JSX.Element => {
   return (
     <div>
       <Image className="flex bg-cover h-[600px] w-full" image={props.top} />
-      <div className="md:flex">
+      <div className="xl:flex">
         {props.bottom.map((image, i) => (
           <Image key={`image-${i}`} className="bg-cover w-full" image={image} />
         ))}

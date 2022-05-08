@@ -2,7 +2,7 @@
 import React from "react";
 import Modal from "react-modal";
 import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { getAllPhotoUrls } from "../../helpers/photos";
 
 const { useState } = React;
@@ -25,6 +25,7 @@ export const Image = (props: Props): JSX.Element => {
       transform: "translate(-50%, -50%)",
       padding: 0,
       border: 0,
+      background: "none",
     },
     overlay: {
       backgroundColor: "rgba(0, 0, 0, 0.50)",
@@ -53,7 +54,13 @@ export const Image = (props: Props): JSX.Element => {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <Carousel dynamicHeight>
+        <Carousel
+          showThumbs={false}
+          dynamicHeight={true}
+          transitionTime={0}
+          useKeyboardArrows={true}
+          autoFocus={true}
+        >
           <div>
             <img src={props.image} />
           </div>

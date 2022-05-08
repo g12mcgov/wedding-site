@@ -10,19 +10,29 @@ export const OurStory = (): JSX.Element => {
           </h1>
         </div>
         <img
-          className="mx-auto my-12"
-          src="/images/us.png"
+          className="mx-auto my-12 max-w-sm"
+          src="/images/wait_chapel.webp"
           alt="Megan & Grant"
         />
         <div className="my-10">
           <p className="font-square-peg max-w-xl mt-5 mx-auto text-3xl text-[#a0bbd3]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            Megan and Grant met at their beloved alma matter, Wake Forest
+            University in the Fall of 2014. They remained friends throughout
+            college, often crossing paths while going on runs around the Wake
+            Forest campus. However, it wasn't until the end of their Senior year
+            when they began to hit things off.
+          </p>
+          <p className="font-square-peg max-w-xl mt-5 mx-auto text-3xl text-[#a0bbd3]">
+            Fast forward six years, Megan and Grant now live in New York York
+            City with their corgi, Winston. Megan is a Vice President in the
+            financial industry and Grant is a Software Engineer.
+          </p>
+          <p className="font-square-peg max-w-xl mt-5 mx-auto text-3xl text-[#a0bbd3]">
+            In their spare time, they can be found skiing a new mountain out
+            West, exploring new restaurants, or finding a new dog park for
+            Winston. They are lovers of reading (particularly by the beach),
+            weekend getaways, and Benihana. Megan is a passionate marathon
+            runner and Grant is an avid cyclist.
           </p>
         </div>
       </div>

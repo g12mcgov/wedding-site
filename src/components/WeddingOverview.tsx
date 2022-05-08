@@ -2,7 +2,7 @@ import { Container } from "./Container";
 
 export const WeddingOverview = (): JSX.Element => {
   return (
-    <Container>
+    <Container zIndex="-z-10">
       <div className="text-center">
         <h1 className="my-10 mt-1 text-6xl font-square-peg sm:text-6xl sm:tracking-tight lg:text-9xl">
           The Wedding

@@ -9,6 +9,9 @@ module.exports = {
         "cormorant-garamond": ["Cormorant Garamond", "serif"],
         "amatic-sc": ["Amatic SC", "cursive"],
       },
+      animation: {
+        pulse: "pulse 1000ms ease-in-out",
+      },
     },
   },
   plugins: [],

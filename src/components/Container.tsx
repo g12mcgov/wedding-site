@@ -1,11 +1,13 @@
 interface Props {
-  className?: string;
+  zIndex?: string;
   children: JSX.Element;
 }
 
 export const Container = (props: Props): JSX.Element => {
   return (
-    <div className="bg-[#fdfdfd] relative -z-10 text-[#b1c2d1] px-4">
+    <div
+      className={`${props.zIndex} bg-[#fdfdfd] relative text-[#b1c2d1] px-4`}
+    >
       <div className="relative mt-24 sm:mt-32 border-sky-100 border-2 max-w-7xl mx-auto pt-16 px-8">
         <div className=" border-sky-100 border-2 -mr-[28px] -ml-[28px] mb-[4px] -mt-[61px]">
           <img

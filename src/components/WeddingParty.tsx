@@ -68,7 +68,7 @@ export const WeddingParty = (): JSX.Element => {
         <div className="sm:flex flex-col justify-center items-center">
           <div className="w-500">
             <div className="hidden md:flex justify-between text-4xl">
-              <h2 className="font-square-peg">Bridemaids</h2>
+              <h2 className="font-square-peg">Bridesmaids</h2>
               <h2 className="font-square-peg">Groomsmen</h2>
             </div>
             {groomsmen.map((groomsman, i) => (

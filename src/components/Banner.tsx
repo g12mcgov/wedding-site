@@ -2,7 +2,7 @@ export const Banner = (): JSX.Element => {
   return (
     <div
       className="bg-cover bg-center h-screen flex"
-      style={{ backgroundImage: "url('proposal.jpg')" }}
+      style={{ backgroundImage: "url('proposal.webp')" }}
     >
       <div className="m-auto">
         <h1 className="text-9xl text-white text-center font-square-peg">

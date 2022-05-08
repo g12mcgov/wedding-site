@@ -28,3 +28,9 @@ code {
 .ReactModal__Overlay--before-close {
   opacity: 0;
 }
+
+.imagetest {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2s linear;
+}
