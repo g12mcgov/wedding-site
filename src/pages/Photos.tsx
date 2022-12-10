@@ -18,24 +18,24 @@ export const Photos = (props: Props): JSX.Element => {
     return Math.floor(Math.random() * (max - min + 1) + min);
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const slot = generateRandomNumber(0, 3);
-      const updatedPhotos = [...photos];
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     const slot = generateRandomNumber(0, 3);
+  //     const updatedPhotos = [...photos];
 
-      let index = photoIndex;
-      if (photoIndex === props.limit) {
-        index = 1;
-      }
+  //     let index = photoIndex;
+  //     if (photoIndex === props.limit) {
+  //       index = 1;
+  //     }
 
-      updatedPhotos[slot] = `/images/collage/${index}.webp`;
-      index++;
+  //     updatedPhotos[slot] = `/images/collage/${index}.webp`;
+  //     index++;
 
-      setPhotos(updatedPhotos);
-      setPhotoIndex(index);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [photos, photoIndex, props.limit]);
+  //     setPhotos(updatedPhotos);
+  //     setPhotoIndex(index);
+  //   }, 5000);
+  //   return () => clearInterval(interval);
+  // }, [photos, photoIndex, props.limit]);
 
   return (
     <>
