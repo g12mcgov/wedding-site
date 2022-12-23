@@ -7,6 +7,7 @@ module.exports = {
         "architects-daughter": ["Architects Daughter", "cursive"],
         caveat: ["Caveat", "cursive"],
         "cormorant-garamond": ["Cormorant Garamond", "serif"],
+        "cormorant-sc": ["Cormorant SC", "serif"],
         "amatic-sc": ["Amatic SC", "cursive"],
       },
       animation: {
