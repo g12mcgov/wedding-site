@@ -56,6 +56,7 @@ export const Image = (props: Props): JSX.Element => {
       >
         <Carousel
           showThumbs={false}
+          showIndicators={false}
           dynamicHeight={true}
           transitionTime={0}
           useKeyboardArrows={true}
