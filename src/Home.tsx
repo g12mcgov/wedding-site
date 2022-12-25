@@ -14,8 +14,6 @@ export const Home = (): JSX.Element => {
       <Winston />
       <WeddingOverview />
       <OurStory />
-      {/* <Divider /> */}
-      {/* <Divider /> */}
       <WeddingParty />
     </>
   );

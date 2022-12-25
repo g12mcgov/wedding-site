@@ -11,9 +11,15 @@ interface Props {
   image: string;
   className: string;
   children?: JSX.Element;
+  showCarousel?: boolean;
 }
 
-export const Image = (props: Props): JSX.Element => {
+export const Image = ({
+  image,
+  className,
+  children,
+  showCarousel = true,
+}: Props): JSX.Element => {
   const customStyles = {
     content: {
       maxWidth: "800px",
@@ -40,13 +46,13 @@ export const Image = (props: Props): JSX.Element => {
     <>
       <div
         onClick={() => setOpen(true)}
-        className={props.className}
+        className={className}
         style={{
-          backgroundImage: `url('${props.image}')`,
+          backgroundImage: `url('${image}')`,
           backgroundPosition: "center",
         }}
       >
-        {props.children}
+        {children}
       </div>
       <Modal
         isOpen={open}
@@ -54,21 +60,23 @@ export const Image = (props: Props): JSX.Element => {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <Carousel
-          showThumbs={false}
-          showIndicators={false}
-          dynamicHeight={true}
-          transitionTime={0}
-          useKeyboardArrows={true}
-          autoFocus={true}
-        >
-          <div>
-            <img src={props.image} />
-          </div>
-          {allPhotos.map((photo) => (
-            <img src={photo} />
-          ))}
-        </Carousel>
+        {showCarousel && (
+          <Carousel
+            showThumbs={false}
+            showIndicators={false}
+            dynamicHeight={true}
+            transitionTime={0}
+            useKeyboardArrows={true}
+            autoFocus={true}
+          >
+            <div>
+              <img src={image} />
+            </div>
+            {allPhotos.map((photo) => (
+              <img src={photo} />
+            ))}
+          </Carousel>
+        )}
       </Modal>
     </>
   );

@@ -11,6 +11,7 @@ import { Navbar } from "./components/navbar/Navbar";
 import { Footer } from "./components/footer/Footer";
 import { ParallaxProvider } from "react-scroll-parallax";
 import { Photos } from "./pages/Photos";
+import { GalleryPage } from "./pages/GalleryPage";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -22,9 +23,10 @@ root.render(
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="guest-accomodations" element={<GuestAccomodations />} />
-          <Route path="details" element={<Details />} />
-          <Route path="photos" element={<Photos />} />
+          <Route path="/guest-accomodations" element={<GuestAccomodations />} />
+          <Route path="/details" element={<Details />} />
+          <Route path="/photos" element={<Photos />} />
+          <Route path="/photos/gallery/:name" element={<GalleryPage />} />
         </Routes>
         <Footer />
       </BrowserRouter>

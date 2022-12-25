@@ -21,7 +21,7 @@ export const Navbar = (): JSX.Element => {
                 </Disclosure.Button>
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch">
-                <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
+                <div className="hidden sm:flex sm:space-x-8">
                   <NavbarLink text="Our Wedding" route="/" />
                   <NavbarLink
                     text="Guest Accomodations"

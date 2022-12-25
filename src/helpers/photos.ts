@@ -1,11 +1,18 @@
-export const getAllPhotoUrls = (): string[] => {
-  return getAllPhotoURLs(0, 82);
+export const getAllPhotoUrls = (
+  galleryName: string,
+  gallerySize: number
+): string[] => {
+  return getAllPhotoURLs(galleryName, 0, gallerySize);
 };
 
-export const getAllPhotoURLs = (start: number, end: number): string[] => {
+export const getAllPhotoURLs = (
+  galleryName: string,
+  start: number,
+  end: number
+): string[] => {
   const photos = [];
   for (let i = start; i <= end; i++) {
-    photos.push(`/images/collage/${i}.webp`);
+    photos.push(`/images/galleries/${galleryName}/${i}.webp`);
   }
   return photos;
 };
