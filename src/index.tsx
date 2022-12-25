@@ -24,7 +24,7 @@ root.render(
           <Route path="/" element={<Home />} />
           <Route path="guest-accomodations" element={<GuestAccomodations />} />
           <Route path="details" element={<Details />} />
-          <Route path="photos" element={<Photos limit={10} />} />
+          <Route path="photos" element={<Photos />} />
         </Routes>
         <Footer />
       </BrowserRouter>
