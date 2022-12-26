@@ -17,14 +17,11 @@ export const OurStory = (): JSX.Element => {
         <div className="font-cormorant-garamond text-2xl text-[#a0bbd3] my-10">
           <p className="max-w-xl mt-5 mx-auto">
             Megan and Grant met at their beloved alma matter, Wake Forest
-            University in the Fall of 2014. They remained friends throughout
-            college, often crossing paths while going on runs around the Wake
-            Forest campus. However, it wasn't until the end of their Senior year
-            when they began to hit things off.
+            University in the Spring of 2016.
           </p>
           <p className="max-w-xl mt-5 mx-auto">
-            Fast forward six years, Megan and Grant now live in New York York
-            City with their corgi, Winston. Megan is a Vice President in the
+            Seven years later, Megan and Grant now live in New York York City
+            with their corgi, Winston. Megan is a Vice President in the
             financial industry and Grant is a Software Engineer.
           </p>
           <p className="max-w-xl mt-5 mx-auto">
