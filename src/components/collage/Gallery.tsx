@@ -3,7 +3,7 @@ import * as React from "react";
 import { Image } from "../../components/collage/Image";
 import { getAllPhotoUrls, shuffle } from "../../helpers/photos";
 import { ImageRow } from "../../components/collage/ImageRow";
-import { getCurrentBreakpoints } from "../../helpers/tailwind";
+import { isMobile } from "../../helpers/tailwind";
 
 const { useEffect, useState } = React;
 
@@ -28,14 +28,6 @@ export const Gallery = (props: Props): JSX.Element => {
 
   function handleResize(): void {
     setNumPhotosInRow(getPhotosInRow());
-  }
-
-  function isMobile(): boolean {
-    const breakpoints = getCurrentBreakpoints();
-    return (
-      breakpoints.length === 0 ||
-      (breakpoints.length === 1 && breakpoints[0] === "sm")
-    );
   }
 
   function getPhotosInRow(): number {

@@ -1,4 +1,5 @@
 import * as React from "react";
+import { isMobile } from "../../helpers/tailwind";
 import { Image } from "./Image";
 
 const { useState } = React;
@@ -34,12 +35,12 @@ export const GalleryPreview = (props: Props): JSX.Element => {
     >
       <Image
         className={`flex bg-cover h-[400px] w-full justify-center items-center ${
-          hovering ? "brightness-50" : ""
+          isMobile() || hovering ? "brightness-50" : ""
         }`}
         image={image}
         showCarousel={false}
       >
-        {hovering && (
+        {(isMobile() || hovering) && (
           <h1 className="text-3xl font-cormorant-garamond text-white">
             {description}
           </h1>

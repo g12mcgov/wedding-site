@@ -28,14 +28,15 @@ export const ImageRow = (props: Props): JSX.Element => {
     <LazyLoad
       height={600}
       key={`row-${rowNumber}`}
+      className={`transition-opacity duration-500 ${
+        fadeIn ? "opacity-100" : "opacity-0"
+      }`}
       onContentVisible={handleOnContentVisible}
     >
       <div className={`md:grid md:grid-cols-3`}>
         {row.map((image: string, i: number) => (
           <Image
-            className={`transition-all duration-500 ${
-              fadeIn ? "opacity-100" : "opacity-0"
-            } bg-cover h-[600px] w-full ${
+            className={`bg-cover h-[600px] w-full ${
               shouldStretch(i) ? "col-span-2" : ""
             }`}
             key={`image-${image}`}
