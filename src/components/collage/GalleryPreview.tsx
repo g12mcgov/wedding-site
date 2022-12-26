@@ -27,7 +27,7 @@ export const GalleryPreview = (props: Props): JSX.Element => {
 
   return (
     <div
-      className="h-[400px] w-full"
+      className="mt-8 h-[400px] w-full"
       onClick={handleOnClick}
       onMouseEnter={handleOnMouseEnter}
       onMouseLeave={handleOnMouseLeave}

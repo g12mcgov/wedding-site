@@ -10,19 +10,19 @@ export const Photos = (): JSX.Element => {
           Photo Galleries
         </h1>
       </div>
-      <div className="flex flex-col md:flex-row space-y-8 md:space-x-8 my-16 px-8">
+      <div className="flex flex-col lg:flex-row lg:space-x-8 my-16 px-8">
         <GalleryPreview
           name="engagement"
           description="Engagement"
           image="/images/galleries/engagement/63.webp"
         />
         <GalleryPreview
-          name="engagement"
+          name="cultural_gardens"
           description="Cleveland Cultural Gardens"
           image="/images/galleries/cultural_gardens/6.webp"
         />
         <GalleryPreview
-          name="engagement"
+          name="museum"
           description="Cleveland Museum of Art"
           image="/images/galleries/museum/139.webp"
         />

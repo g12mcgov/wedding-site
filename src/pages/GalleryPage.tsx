@@ -6,16 +6,26 @@ import { Gallery } from "../components/collage/Gallery";
 export const GalleryPage = (): JSX.Element => {
   const { name } = useParams();
 
-  const getSizeForGallery = (): number => {
+  const getGallerySettings = (): { size: number; bannerImage: number } => {
     switch (name) {
       case "engagement":
-        return 82;
+        return { size: 82, bannerImage: 63 };
+      case "cultural_gardens":
+        return { size: 187, bannerImage: 6 };
+      case "museum":
+        return { size: 163, bannerImage: 139 };
+      default:
+        throw new Error(`Unknown name ${name}`);
     }
   };
 
+  const { size, bannerImage } = getGallerySettings();
+
   return (
-    <div>
-      <Gallery name={name} size={getSizeForGallery()} />
-    </div>
+    <Gallery
+      name={name}
+      size={size}
+      bannerImage={`/images/galleries/${name}/${bannerImage}.webp`}
+    />
   );
 };

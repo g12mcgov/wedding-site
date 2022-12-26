@@ -10,10 +10,11 @@ const { useEffect, useState } = React;
 interface Props {
   name: string;
   size: number;
+  bannerImage: string;
 }
 
 export const Gallery = (props: Props): JSX.Element => {
-  const { name, size } = props;
+  const { name, size, bannerImage } = props;
 
   const [numPhotosInRow, setNumPhotosInRow] = useState<number>(
     getPhotosInRow()
@@ -55,10 +56,7 @@ export const Gallery = (props: Props): JSX.Element => {
 
   return (
     <>
-      <Image
-        className="flex bg-cover h-[600px] w-full"
-        image={photos.find((image) => image.endsWith("63.webp"))}
-      />
+      <Image className="flex bg-cover h-[600px] w-full" image={bannerImage} />
       <div>
         {getPhotoGrid().map((row, i) => (
           <ImageRow row={row} rowNumber={i} />

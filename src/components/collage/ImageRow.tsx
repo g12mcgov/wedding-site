@@ -26,7 +26,7 @@ export const ImageRow = (props: Props): JSX.Element => {
 
   return (
     <LazyLoad
-      height={500}
+      height={600}
       key={`row-${rowNumber}`}
       onContentVisible={handleOnContentVisible}
     >
@@ -35,7 +35,7 @@ export const ImageRow = (props: Props): JSX.Element => {
           <Image
             className={`transition-all duration-500 ${
               fadeIn ? "opacity-100" : "opacity-0"
-            } bg-cover h-[500px] w-full ${
+            } bg-cover h-[600px] w-full ${
               shouldStretch(i) ? "col-span-2" : ""
             }`}
             key={`image-${image}`}
