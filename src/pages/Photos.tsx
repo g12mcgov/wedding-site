@@ -27,7 +27,7 @@ export const Photos = (): JSX.Element => {
           image="/images/galleries/museum/139.webp"
         />
       </div>
-      <div className="flex flex-col sm:flex-row items-center justify-center space-x-2 text-slate-300 mt-12 sm:mt-24 sm:mb-16 text-md">
+      <div className="flex flex-col sm:flex-row items-center justify-center space-x-2 text-[#a0bbd3] mt-12 sm:mt-24 sm:mb-16 text-md">
         <a
           href="https://www.sparklephoto.com/"
           target="_blank"
