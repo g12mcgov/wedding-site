@@ -14,12 +14,14 @@ export const Details = (): JSX.Element => {
       <Container>
         <div className="mb-12">
           <div className="font-cormorant-garamond text-center text-[#a0bbd3]">
-            <h2 className="max-w-xl mt-6 mx-auto text-5xl">Schedule</h2>
+            <h2 className="max-w-xl mt-6 mx-auto text-5xl">
+              Weekend Festivities
+            </h2>
             <h3 className="max-w-xl mt-12 mx-auto text-3xl">
               Friday, June 23, 2023
             </h3>
             <p className="max-w-xl mt-5 mx-auto text-2xl">
-              8:00pm - Welcome Drinks
+              8:00pm - Welcome Cocktail Party
             </p>
             <p className="max-w-xl mt-5 mx-auto text-2xl">The Ritz Carlton</p>
             <Address
@@ -106,6 +108,7 @@ export const Details = (): JSX.Element => {
             url="https://www.rockhall.com/"
             name="Rock & Roll Hall of Fame"
             img="/images/rock_and_roll_hall_of_fame.webp"
+            description="Famous museum memorializing rockstars such as Elvis Presley, Dolly Parton, and The Beatles."
             address={{
               street: "1100 E 9th St",
               city: "Cleveland, OH",
@@ -116,7 +119,7 @@ export const Details = (): JSX.Element => {
             url="https://www.greatlakesbrewing.com/"
             name="Great Lakes Brewing"
             img="/images/great_lakes_brewing.webp"
-            description="Local brewery and brewpub in Cleveland's West Side."
+            description="Local brewery and brewpub located in Cleveland's West Side."
             address={{
               street: "623 Euclid Ave",
               city: "Cleveland, OH",
@@ -127,7 +130,7 @@ export const Details = (): JSX.Element => {
             url="https://www.clevelandmetroparks.com/parks/visit/parks/lakefront-reservation/edgewater-beach"
             name="Edgewater Beach"
             img="/images/edgewater_beach.webp"
-            description="Lakefront beach in downtown Cleveland (dog friendly!)"
+            description="Lakefront beach in downtown Cleveland. This is a Winston favorite (dog friendly)!"
             address={{
               street: "Edgewater Beach",
               city: "Cleveland, OH",
@@ -149,7 +152,7 @@ export const Details = (): JSX.Element => {
             url="https://www.clevelandart.org/"
             name="The Cleveland Museum of Art"
             img="/images/cleveland_museum_of_art.webp"
-            description="Free admission, expansive, world renowned art museum."
+            description="World renowned art museum (free admission)."
             address={{
               street: "11150 East Blvd",
               city: "Cleveland, OH",
@@ -160,7 +163,7 @@ export const Details = (): JSX.Element => {
             url="https://clevelandculturalgardens.org/"
             name="Cleveland Cultural Gardens"
             img="/images/cleveland_cultural_gardens.webp"
-            description="Public gardens featuring global countries in Rockefeller Park. A sight to behold!"
+            description="A collection of public gardens located in Rockefeller Park. We took some of our engagement photos in the Italian gardens."
             address={{
               street: "10823 Magnolia Dr",
               city: "Cleveland, OH",
@@ -171,7 +174,7 @@ export const Details = (): JSX.Element => {
             url="https://www.stanhywet.org/"
             name="Stan Hywet Hall & Gardens"
             img="/images/stan_hywet_hall_gardens.webp"
-            description="Historic National Landmark; mansion once home to F.A. Seiberling, co-founder of Goodyear Tire Company."
+            description="Historic National Landmark; the mansion once home to F.A. Seiberling, co-founder of Goodyear Tire Company."
             subtext="Note: This is approx. a 40 minute drive from downtown Cleveland."
             address={{
               street: "714 N Portage Path",
