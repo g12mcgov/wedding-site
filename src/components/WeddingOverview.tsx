@@ -16,7 +16,7 @@ export const WeddingOverview = (): JSX.Element => {
         <p className="max-w-xl mx-auto text-2xl">Bratenahl, OH 44108</p>
         <img
           className="mx-auto my-12 sm:max-w-lg"
-          src="/images/shoreby_club.jpg"
+          src="/images/shoreby_club.webp"
           alt="The Shoreby Club"
         />
         <div className="my-10">

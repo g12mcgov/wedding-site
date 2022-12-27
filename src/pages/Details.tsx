@@ -1,5 +1,7 @@
 import * as React from "react";
 import { Container } from "../components/Container";
+import { Address } from "../components/details/Address";
+import { Attraction } from "../components/details/Attraction";
 
 export const Details = (): JSX.Element => {
   return (
@@ -20,8 +22,11 @@ export const Details = (): JSX.Element => {
               8:00pm - Welcome Drinks
             </p>
             <p className="max-w-xl mt-5 mx-auto text-2xl">The Ritz Carlton</p>
-            <p className="max-w-xl mx-auto text-2xl">1515 W 3rd Street</p>
-            <p className="max-w-xl mx-auto text-2xl">Cleveland, OH 44113</p>
+            <Address
+              street="1515 W 3rd Street"
+              city="Cleveland, OH"
+              zip="44113"
+            />
             <h3 className="max-w-xl mt-12 mx-auto text-3xl">
               Saturday, June 24, 2023
             </h3>
@@ -32,53 +37,148 @@ export const Details = (): JSX.Element => {
               Cocktails, dinner, and dancing to follow
             </p>
             <p className="max-w-xl mt-5 mx-auto text-2xl">The Shoreby Club</p>
-            <p className="max-w-xl mx-auto text-2xl">40 Shoreby Drive</p>
-            <p className="max-w-xl mx-auto text-2xl">Bratenahl, OH 44108</p>
+            <Address
+              street="40 Shoreby Drive"
+              city="Bratenahl, OH"
+              zip="44108"
+            />
           </div>
-          <div className="font-cormorant-garamond text-center text-[#a0bbd3]">
-            <h2 className="max-w-xl mt-20 mx-auto text-5xl">Things To Do</h2>
-            <h3 className="max-w-xl mt-12 mx-auto text-3xl">
-              Recommended Dining:
-            </h3>
-            <a
-              href="https://gomarestaurant.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <h3 className="max-w-xl mt-6 mx-auto text-3xl">Goma</h3>
-            </a>
-            <p className="max-w-xl mt-2 mx-auto text-xl italic">
-              Japanese, Sushi, Izayaka
-            </p>
-            <p className="max-w-xl mx-auto text-2xl">1515 W 3rd Street</p>
-            <p className="max-w-xl mx-auto text-2xl">Cleveland, OH 44113</p>
-            <a
-              href="https://www.marbleroomcle.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <h3 className="max-w-xl mt-12 mx-auto text-3xl">
-                The Marble Room
-              </h3>
-            </a>
-            <p className="max-w-xl mt-2 mx-auto text-xl italic">
-              Steaks, Chops, Sushi
-            </p>
-            <p className="max-w-xl mx-auto text-2xl">623 Euclid Ave</p>
-            <p className="max-w-xl mx-auto text-2xl">Cleveland, OH 44114</p>
-            <a
-              href="https://www.valeriosristorante.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <h3 className="max-w-xl mt-12 mx-auto text-3xl">Valerio's</h3>
-            </a>
-            <p className="max-w-xl mt-2 mx-auto text-xl italic">
-              Italian, pasta, steaks
-            </p>
-            <p className="max-w-xl mx-auto text-2xl">12405 Mayfield Rd</p>
-            <p className="max-w-xl mx-auto text-2xl">Cleveland, OH 44106</p>
-          </div>
+        </div>
+      </Container>
+      <Container>
+        <div className="font-cormorant-garamond text-center text-[#a0bbd3]">
+          <h2 className="max-w-xl mt-20 mx-auto text-5xl">Things To Do</h2>
+          <h3 className="max-w-xl mt-12 mx-auto text-4xl">
+            Recommended Dining:
+          </h3>
+          <Attraction
+            url="https://gomarestaurant.com/"
+            name="Goma"
+            description="Japanese, Sushi, Izayaka"
+            address={{
+              street: "1515 W 3rd Street",
+              city: "Cleveland, OH",
+              zip: "44113",
+            }}
+          />
+          <Attraction
+            url="https://www.marbleroomcle.com/"
+            name="The Marble Room"
+            description="Steaks, Chops, Sushi"
+            address={{
+              street: "623 Euclid Ave",
+              city: "Cleveland, OH",
+              zip: "44114",
+            }}
+          />
+          <Attraction
+            url="https://www.valeriosristorante.com/"
+            name="Valerio's"
+            description="Italian, Pasta, Steaks"
+            address={{
+              street: "12405 Mayfield Rd",
+              city: "Cleveland, OH",
+              zip: "44106",
+            }}
+          />
+          <Attraction
+            url="https://danteboccuzzi.com/ginko-restaurant/"
+            name="Ginko"
+            description="Japanese, Sushi, Omakase"
+            address={{
+              street: "2247 Professor Ave B",
+              city: "Cleveland, OH",
+              zip: "44113",
+            }}
+          />
+          <Attraction
+            url="https://mytaza.com/"
+            name="Taza"
+            description="Lebanese, Mediterranean"
+            address={{
+              street: "1400 W 6th St",
+              city: "Cleveland, OH",
+              zip: "44113",
+            }}
+          />
+          <h3 className="max-w-xl mt-16 mx-auto text-4xl">Attractions:</h3>
+          <Attraction
+            url="https://www.rockhall.com/"
+            name="Rock & Roll Hall of Fame"
+            img="/images/rock_and_roll_hall_of_fame.webp"
+            address={{
+              street: "1100 E 9th St",
+              city: "Cleveland, OH",
+              zip: "44114",
+            }}
+          />
+          <Attraction
+            url="https://www.greatlakesbrewing.com/"
+            name="Great Lakes Brewing"
+            img="/images/great_lakes_brewing.webp"
+            description="Local brewery and brewpub in Cleveland's West Side."
+            address={{
+              street: "623 Euclid Ave",
+              city: "Cleveland, OH",
+              zip: "44114",
+            }}
+          />
+          <Attraction
+            url="https://www.clevelandmetroparks.com/parks/visit/parks/lakefront-reservation/edgewater-beach"
+            name="Edgewater Beach"
+            img="/images/edgewater_beach.webp"
+            description="Lakefront beach in downtown Cleveland (dog friendly!)"
+            address={{
+              street: "Edgewater Beach",
+              city: "Cleveland, OH",
+              zip: "44102",
+            }}
+          />
+          <Attraction
+            url="https://westsidemarket.org/"
+            name="Westside Market"
+            img="/images/westside_market.webp"
+            description="Historic indoor/outdoor market with great food & drink."
+            address={{
+              street: "1979 W 25th St",
+              city: "Cleveland, OH",
+              zip: "44113",
+            }}
+          />
+          <Attraction
+            url="https://www.clevelandart.org/"
+            name="The Cleveland Museum of Art"
+            img="/images/cleveland_museum_of_art.webp"
+            description="Free admission, expansive, world renowned art museum."
+            address={{
+              street: "11150 East Blvd",
+              city: "Cleveland, OH",
+              zip: "44106",
+            }}
+          />
+          <Attraction
+            url="https://clevelandculturalgardens.org/"
+            name="Cleveland Cultural Gardens"
+            img="/images/cleveland_cultural_gardens.webp"
+            description="Public gardens featuring global countries in Rockefeller Park. A sight to behold!"
+            address={{
+              street: "10823 Magnolia Dr",
+              city: "Cleveland, OH",
+              zip: "44106",
+            }}
+          />
+          <Attraction
+            url="https://www.stanhywet.org/"
+            name="Stan Hywet Hall & Gardens"
+            img="/images/stan_hywet_hall_gardens.webp"
+            description="Historic National Landmark; mansion once home to F.A. Seiberling, co-founder of Goodyear Tire Company."
+            subtext="Note: This is approx. a 40 minute drive from downtown Cleveland."
+            address={{
+              street: "714 N Portage Path",
+              city: "Akron, OH",
+              zip: "44303",
+            }}
+          />
         </div>
       </Container>
     </>
