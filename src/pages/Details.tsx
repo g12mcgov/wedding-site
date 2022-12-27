@@ -23,6 +23,7 @@ export const Details = (): JSX.Element => {
             <p className="max-w-xl mt-5 mx-auto text-2xl">
               8:00pm - Welcome Cocktail Party
             </p>
+            <p className="max-w-xl mt-5 mx-auto text-2xl">Radiant Room</p>
             <p className="max-w-xl mt-5 mx-auto text-2xl">The Ritz Carlton</p>
             <Address
               street="1515 W 3rd Street"
@@ -103,7 +104,7 @@ export const Details = (): JSX.Element => {
               zip: "44113",
             }}
           />
-          <h3 className="max-w-xl mt-16 mx-auto text-4xl">Attractions:</h3>
+          <h3 className="max-w-xl mt-16 mx-auto text-4xl">Fun Activities:</h3>
           <Attraction
             url="https://www.rockhall.com/"
             name="Rock & Roll Hall of Fame"

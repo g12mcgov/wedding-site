@@ -21,9 +21,9 @@ export const WeddingOverview = (): JSX.Element => {
         />
         <div className="my-10">
           <p className="max-w-xl mt-5 mx-auto text-2xl">
-            There will be valet attendants to assist guests when they arrive at
-            The Shoreby Club. Transportation will also be provided via a shuttle
-            service between the Shoreby Club and the Ritz Carlton.
+            Transportation will be provided via shuttle service between all four
+            hotels. There will also be valet attendants to assist guests
+            arriving at The Shoreby Club.
           </p>
         </div>
       </div>
