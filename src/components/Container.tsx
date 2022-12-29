@@ -12,7 +12,7 @@ export const Container = (props: Props): JSX.Element => {
         <div className=" border-sky-100 border-2 -mr-[24px] -ml-[24px] mb-[4px] -mt-[61px] px-4">
           <img
             className="mx-auto max-w-[100px] -mt-[50px] sm:max-w-[150px] sm:-mt-[70px] mb-8"
-            src="/images/hydragena_water_colors.png"
+            src="/images/hydragena_water_colors.webp"
             alt=""
           />
           {props.children}

@@ -31,6 +31,11 @@ export const Navbar = (): JSX.Element => {
                   <NavbarLink text="Photography" route="/photos" />
                   <NavbarLink text="Registry" route="/registry" />
                 </div>
+                <div className="sm:hidden font-cormorant-garamond text-[#a0bbd3] m-auto">
+                  <span className="text-3xl">M</span>
+                  <span className="text-2xl">&</span>
+                  <span className="text-3xl">G</span>
+                </div>
               </div>
             </div>
           </div>
