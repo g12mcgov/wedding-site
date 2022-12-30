@@ -24,7 +24,9 @@ export const Attraction = (props: Props): JSX.Element => {
       {subtext && (
         <p className="max-w-xl mt-2 mx-auto text-lg italic">{subtext}</p>
       )}
-      <Address {...address} />
+      <div className="mt-4">
+        <Address {...address} />
+      </div>
     </div>
   );
 };
