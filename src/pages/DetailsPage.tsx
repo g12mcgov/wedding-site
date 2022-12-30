@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Button } from "../components/buttons/Button";
 import { Container } from "../components/Container";
 import { Address } from "../components/details/Address";
 import { Attraction } from "../components/details/Attraction";
@@ -45,6 +46,14 @@ export const DetailsPage = (): JSX.Element => {
               city="Bratenahl, OH"
               zip="44108"
             />
+            <div className="mt-12">
+              <Button
+                text="Import to your calendar"
+                onClick={() =>
+                  window.open("/Megan & Grant's Wedding.ics", "_blank")
+                }
+              />
+            </div>
           </div>
         </div>
       </Container>
