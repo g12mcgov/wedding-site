@@ -2,7 +2,7 @@ import * as React from "react";
 import { Button } from "../components/buttons/Button";
 import { Container } from "../components/Container";
 
-export const GuestAccomodations = (): JSX.Element => {
+export const GuestAccomodationsPage = (): JSX.Element => {
   return (
     <>
       <div className="font-cormorant-garamond text-center">

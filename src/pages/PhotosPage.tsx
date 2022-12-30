@@ -1,8 +1,8 @@
 import * as React from "react";
 
-import { GalleryPreview } from "../components/collage/GalleryPreview";
+import { GalleryPreview } from "../components/photos/GalleryPreview";
 
-export const Photos = (): JSX.Element => {
+export const PhotosPage = (): JSX.Element => {
   return (
     <div className="font-cormorant-garamond">
       <div className="text-center">

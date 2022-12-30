@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useParams } from "react-router-dom";
 
-import { Gallery } from "../components/collage/Gallery";
+import { Gallery } from "../components/photos/Gallery";
 
 export const GalleryPage = (): JSX.Element => {
   const { name } = useParams();

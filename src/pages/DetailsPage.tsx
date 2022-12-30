@@ -3,7 +3,7 @@ import { Container } from "../components/Container";
 import { Address } from "../components/details/Address";
 import { Attraction } from "../components/details/Attraction";
 
-export const Details = (): JSX.Element => {
+export const DetailsPage = (): JSX.Element => {
   return (
     <>
       <div className="font-cormorant-garamond text-center">

@@ -1,8 +1,8 @@
 import * as React from "react";
 
-import { Image } from "../../components/collage/Image";
+import { Image } from "./Image";
 import { getAllPhotoUrls, shuffle } from "../../helpers/photos";
-import { ImageRow } from "../../components/collage/ImageRow";
+import { ImageRow } from "./ImageRow";
 import { isMobile } from "../../helpers/tailwind";
 
 const { useEffect, useState } = React;
