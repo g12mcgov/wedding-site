@@ -4,14 +4,20 @@ interface Props {
   image: string;
   overlay?: JSX.Element;
   url: string;
+  clickable?: boolean;
 }
 
 export const RegistryItem = (props: Props): JSX.Element => {
-  const { image, overlay, url } = props;
+  const { image, overlay, url, clickable = true } = props;
 
   return (
-    <div className="m-auto mt-8 h-[400px] w-[400px] font-cormorant-garamond text-[#a0bbd3]">
-      <a href={url} target="_blank" rel="noreferrer">
+    <div className="m-auto mt-8 h-[400px] font-cormorant-garamond text-[#a0bbd3]">
+      <a
+        href={url}
+        target="_blank"
+        rel="noreferrer"
+        className={`${clickable ? "" : "pointer-events-none"}`}
+      >
         <Image
           height="400px"
           image={image}
