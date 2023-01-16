@@ -48,7 +48,7 @@ export const Gallery = (props: Props): JSX.Element => {
 
   return (
     <>
-      <Image className="flex bg-cover h-[600px] w-full" image={bannerImage} />
+      <Image height="600px" image={bannerImage} />
       <div>
         {getPhotoGrid().map((row, i) => (
           <ImageRow row={row} rowNumber={i} />

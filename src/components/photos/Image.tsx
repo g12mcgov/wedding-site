@@ -9,16 +9,20 @@ const { useState } = React;
 
 interface Props {
   image: string;
-  className: string;
-  children?: JSX.Element;
+  height: string;
   showCarousel?: boolean;
+  brightness?: number;
+  className?: string;
+  overlay?: JSX.Element;
 }
 
 export const Image = ({
   image,
-  className,
-  children,
+  height,
+  overlay,
+  className = "",
   showCarousel = true,
+  brightness = 100,
 }: Props): JSX.Element => {
   const customStyles = {
     content: {
@@ -43,17 +47,22 @@ export const Image = ({
   const allPhotos = getAllPhotoUrls();
 
   return (
-    <>
+    <div className={`relative`}>
       <div
         onClick={() => setOpen(true)}
-        className={className}
+        className={`flex bg-cover w-full h-[${height}] justify-center items-center left-0 top-0 brightness-${brightness} ${className}`}
         style={{
           backgroundImage: `url('${image}')`,
           backgroundPosition: "center",
         }}
-      >
-        {children}
-      </div>
+      />
+      {overlay && (
+        <div
+          className={`flex items-center justify-center h-[${height}] text-center brightness-100 text-3xl font-cormorant-garamond text-white`}
+        >
+          {overlay}
+        </div>
+      )}
       <Modal
         isOpen={open}
         onRequestClose={() => setOpen(false)}
@@ -78,6 +87,6 @@ export const Image = ({
           </Carousel>
         )}
       </Modal>
-    </>
+    </div>
   );
 };

@@ -19,14 +19,14 @@ export const GuestAccomodationsPage = (): JSX.Element => {
               rel="noreferrer"
             >
               <h2 className="max-w-xl mt-6 mx-auto text-5xl">
-                The Ritz Carlton
+                The Ritz-Carlton
               </h2>
             </a>
             <p className="max-w-xl mt-6 mx-auto text-3xl">Cleveland, Ohio</p>
             <img
               className="mx-auto my-8 sm:max-w-lg"
               src="/images/hotels/ritz_carlton.webp"
-              alt="The Ritz Carlton"
+              alt="The Ritz-Carlton"
             />
             <p className="max-w-xl mt-5 mx-auto text-2xl">1515 W 3rd Street</p>
             <p className="max-w-xl mx-auto text-2xl">Cleveland, OH 44113</p>
@@ -53,7 +53,7 @@ export const GuestAccomodationsPage = (): JSX.Element => {
             <img
               className="mx-auto my-8 sm:max-w-lg"
               src="/images/hotels/hyatt_regency.webp"
-              alt="The Ritz Carlton"
+              alt="Hyatt Regency Arcade"
             />
             <p className="max-w-xl mt-5 mx-auto text-2xl">420 Superior Ave</p>
             <p className="max-w-xl mx-auto text-2xl">Cleveland, OH 44114</p>
@@ -89,7 +89,7 @@ export const GuestAccomodationsPage = (): JSX.Element => {
             <img
               className="mx-auto my-8 sm:max-w-lg"
               src="/images/hotels/westin.webp"
-              alt="The Ritz Carlton"
+              alt="The Westin Cleveland Downtown"
             />
             <p className="max-w-xl mt-5 mx-auto text-2xl">
               777 St Clair Ave NE

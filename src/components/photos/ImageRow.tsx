@@ -34,15 +34,14 @@ export const ImageRow = (props: Props): JSX.Element => {
       onContentVisible={handleOnContentVisible}
     >
       <div className={`md:grid md:grid-cols-3`}>
-        {row.map((image: string, i: number) => (
-          <Image
-            className={`bg-cover h-[600px] w-full ${
-              shouldStretch(i) ? "col-span-2" : ""
-            }`}
-            key={`image-${image}`}
-            image={image}
-          />
-        ))}
+        {row.map((image: string, i: number) => {
+          console.log(`shouldStretch(${i}): `, shouldStretch(i));
+          return (
+            <div className={shouldStretch(i) ? "col-span-2" : ""}>
+              <Image height="600px" key={`image-${image}`} image={image} />
+            </div>
+          );
+        })}
       </div>
     </LazyLoad>
   );

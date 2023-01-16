@@ -31,18 +31,13 @@ export const GalleryPreview = (props: Props): JSX.Element => {
     >
       <Link to={`/photos/gallery/${name}`}>
         <Image
-          className={`flex bg-cover h-[400px] w-full justify-center items-center ${
-            isMobile() || hovering ? "brightness-50" : ""
-          }`}
+          height="400px"
+          className="absolute"
+          brightness={isMobile() || hovering ? 50 : 100}
           image={image}
           showCarousel={false}
-        >
-          {(isMobile() || hovering) && (
-            <h1 className="text-3xl font-cormorant-garamond text-white">
-              {description}
-            </h1>
-          )}
-        </Image>
+          overlay={<h1>{isMobile() || hovering ? description : ""}</h1>}
+        />
       </Link>
     </div>
   );
