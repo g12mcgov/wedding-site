@@ -11,7 +11,7 @@ export const RegistryItem = (props: Props): JSX.Element => {
   const { image, overlay, url, clickable = true } = props;
 
   return (
-    <div className="m-auto mt-8 h-[400px] w-[400px] font-cormorant-garamond text-[#a0bbd3]">
+    <div className="m-auto mt-8 h-[400px] sm:w-full md:w-[400px] font-cormorant-garamond text-[#a0bbd3]">
       <a
         href={url}
         target="_blank"
