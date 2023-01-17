@@ -23,8 +23,6 @@ export const GalleryPreview = (props: Props): JSX.Element => {
     setHovering(false);
   }
 
-  console.log("isMobile: ", isMobile());
-
   return (
     <div
       className="mt-8 h-[400px] w-full"

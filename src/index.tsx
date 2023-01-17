@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import ReactGA from "react-ga4";
 
 import "./index.css";
@@ -20,40 +20,48 @@ const { useEffect } = React;
 const TRACKING_ID = "G-XLYHJXV9DN";
 ReactGA.initialize(TRACKING_ID);
 
+const App = (): JSX.Element => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const page = location.pathname + location.search;
+    ReactGA.send({
+      hitType: "pageview",
+      page: page,
+    });
+  }, [location]);
+
+  return (
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route
+          path="/guest-accomodations"
+          element={<GuestAccomodationsPage />}
+        />
+        <Route path="/details" element={<DetailsPage />} />
+        <Route path="/photos" element={<PhotosPage />} />
+        <Route path="/photos/gallery/:name" element={<GalleryPage />} />
+        <Route path="/registry" element={<RegistryPage />} />
+      </Routes>
+      <Footer />
+    </>
+  );
+};
+
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 
-const App = (): JSX.Element => {
-  useEffect(() => {
-    ReactGA.send({
-      hitType: "pageview",
-      page: window.location.pathname + window.location.search,
-    });
-  }, []);
+root.render(
+  <React.StrictMode>
+    <ParallaxProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </ParallaxProvider>
+  </React.StrictMode>
+);
 
-  return (
-    <React.StrictMode>
-      <ParallaxProvider>
-        <BrowserRouter>
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route
-              path="/guest-accomodations"
-              element={<GuestAccomodationsPage />}
-            />
-            <Route path="/details" element={<DetailsPage />} />
-            <Route path="/photos" element={<PhotosPage />} />
-            <Route path="/photos/gallery/:name" element={<GalleryPage />} />
-            <Route path="/registry" element={<RegistryPage />} />
-          </Routes>
-          <Footer />
-        </BrowserRouter>
-      </ParallaxProvider>
-    </React.StrictMode>
-  );
-};
-
-root.render(<App />);
 reportWebVitals();
