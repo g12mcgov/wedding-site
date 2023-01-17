@@ -11,7 +11,7 @@ interface Props {
   image: string;
   height: string;
   showCarousel?: boolean;
-  brightness?: number;
+  brightness?: string;
   className?: string;
   overlay?: JSX.Element;
 }
@@ -22,7 +22,7 @@ export const Image = ({
   overlay,
   className = "",
   showCarousel = true,
-  brightness = 100,
+  brightness = "brightness-100",
 }: Props): JSX.Element => {
   const customStyles = {
     content: {
@@ -50,7 +50,7 @@ export const Image = ({
     <div className={`relative`}>
       <div
         onClick={() => setOpen(true)}
-        className={`${height} flex bg-cover w-full justify-center items-center left-0 top-0 brightness-${brightness} ${className}`}
+        className={`${height} flex bg-cover w-full justify-center items-center left-0 top-0 ${brightness} ${className}`}
         style={{
           backgroundImage: `url('${image}')`,
           backgroundPosition: "center",

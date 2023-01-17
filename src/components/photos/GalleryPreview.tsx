@@ -35,7 +35,9 @@ export const GalleryPreview = (props: Props): JSX.Element => {
         <Image
           height="h-[400px]"
           className="absolute"
-          brightness={isMobile() || hovering ? 50 : 100}
+          brightness={
+            isMobile() || hovering ? "brightness-50" : "brightness-100"
+          }
           image={image}
           showCarousel={false}
           overlay={<h1>{isMobile() || hovering ? description : ""}</h1>}

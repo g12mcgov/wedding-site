@@ -12,7 +12,11 @@ export const PhotoCollage = (props: Props): JSX.Element => {
     <div>
       <Image height="h-[600px]" image={props.top} />
       <div className="xl:flex">
-        <Image height="h-[500px]" brightness={50} image={props.last} />
+        <Image
+          height="h-[500px]"
+          brightness="brightness-50"
+          image={props.last}
+        />
       </div>
     </div>
   );

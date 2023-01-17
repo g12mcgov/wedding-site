@@ -22,7 +22,7 @@ export const RegistryItem = (props: Props): JSX.Element => {
           height="h-[400px]"
           image={image}
           showCarousel={false}
-          brightness={50}
+          brightness="brightness-50"
           className="absolute"
           overlay={overlay}
         />
