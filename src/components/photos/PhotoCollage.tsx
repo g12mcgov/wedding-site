@@ -10,9 +10,9 @@ interface Props {
 export const PhotoCollage = (props: Props): JSX.Element => {
   return (
     <div>
-      <Image height="600px" image={props.top} />
+      <Image height="h-[600px]" image={props.top} />
       <div className="xl:flex">
-        <Image height="500px" brightness={50} image={props.last} />
+        <Image height="h-[500px]" brightness={50} image={props.last} />
       </div>
     </div>
   );

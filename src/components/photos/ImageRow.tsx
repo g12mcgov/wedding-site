@@ -36,7 +36,7 @@ export const ImageRow = (props: Props): JSX.Element => {
       <div className={`md:grid md:grid-cols-3`}>
         {row.map((image: string, i: number) => (
           <div className={shouldStretch(i) ? "col-span-2" : ""}>
-            <Image height="600px" key={`image-${image}`} image={image} />
+            <Image height="h-[600px]" key={`image-${image}`} image={image} />
           </div>
         ))}
       </div>

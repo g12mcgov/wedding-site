@@ -50,7 +50,7 @@ export const Image = ({
     <div className={`relative`}>
       <div
         onClick={() => setOpen(true)}
-        className={`flex bg-cover w-full h-[${height}] justify-center items-center left-0 top-0 brightness-${brightness} ${className}`}
+        className={`${height} flex bg-cover w-full justify-center items-center left-0 top-0 brightness-${brightness} ${className}`}
         style={{
           backgroundImage: `url('${image}')`,
           backgroundPosition: "center",
@@ -58,7 +58,7 @@ export const Image = ({
       />
       {overlay && (
         <div
-          className={`flex items-center justify-center h-[${height}] text-center brightness-100 text-3xl font-cormorant-garamond text-white`}
+          className={`${height} flex items-center justify-center text-center brightness-100 text-3xl font-cormorant-garamond text-white`}
         >
           {overlay}
         </div>

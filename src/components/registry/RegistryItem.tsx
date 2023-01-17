@@ -19,7 +19,7 @@ export const RegistryItem = (props: Props): JSX.Element => {
         className={`${clickable ? "" : "pointer-events-none"}`}
       >
         <Image
-          height="400px"
+          height="h-[400px]"
           image={image}
           showCarousel={false}
           brightness={50}
