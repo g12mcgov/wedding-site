@@ -13,7 +13,7 @@ const groomsmen = [
   },
   {
     name: "Gaurav Sheni",
-    image: "/images/groomsmen/gaurav.jpg",
+    image: "/images/groomsmen/gaurav.webp",
   },
   {
     name: "Smith Collett",
