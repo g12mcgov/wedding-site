@@ -7,9 +7,17 @@ export interface Props {
 }
 
 export const Avatar = (props: Props): JSX.Element => {
+  // Override browser/iOS popup menus on right click
+  // (e.g. save image etc).
+  const handleOnContextMenu = (e: any): void => {
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
   return (
     <div
       {...props.longPress}
+      onContextMenu={handleOnContextMenu}
       className="font-cormorant-garamond flex my-8 items-center justify-center [-webkit-touch-callout:none]"
     >
       <div className="w-28">
