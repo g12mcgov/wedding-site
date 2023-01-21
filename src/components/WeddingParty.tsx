@@ -18,7 +18,8 @@ const groomsmen: Array<ImageConfig> = [
   },
   {
     name: "Philipp Werner",
-    image: "/images/groomsmen/phil.webp",
+    image: "/images/groomsmen/phil.jpeg",
+    secondaryImage: "https://www.dropbox.com/s/h13elog732kgae3/phil.gif?raw=1",
   },
   {
     name: "Gaurav Sheni",

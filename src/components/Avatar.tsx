@@ -13,10 +13,11 @@ export const Avatar = (props: Props): JSX.Element => {
       className="font-cormorant-garamond flex my-8 items-center justify-center [-webkit-touch-callout:none]"
     >
       <div className="w-28">
-        <img
-          className="shadow-xl mx-auto block max-h-[28] h-28 max-w-[28] w-28 rounded-full"
-          src={props.image}
-          alt=""
+        <div
+          className="shadow-xl mx-auto block max-h-[28] h-28 max-w-[28] w-28 rounded-full bg-cover"
+          style={{
+            backgroundImage: `url('${props.image}')`,
+          }}
         />
         <p className="mt-4 text-center text-2xl font-medium group-hover:text-gray-900">
           {props.name}
