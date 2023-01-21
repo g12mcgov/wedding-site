@@ -14,7 +14,7 @@ const groomsmen: Array<ImageConfig> = [
   {
     name: "Jonathan Friedman",
     image: "/images/groomsmen/jon.webp",
-    subname: "(Best Man)",
+    subname: "Best Man",
   },
   {
     name: "Philipp Werner",
@@ -46,10 +46,12 @@ const bridesmaids: Array<ImageConfig> = [
   {
     name: "Payton Donnan",
     image: "/images/bridesmaids/payton.webp",
+    subname: "Maid of Honor",
   },
   {
     name: "Kirsten Donnan",
     image: "/images/bridesmaids/kirsten.webp",
+    subname: "Matron of Honor",
   },
   {
     name: "Meghan McGovern",
@@ -85,6 +87,7 @@ const WrappedAvator = (props: WrappedAvatorProps): JSX.Element => {
     <Avatar
       name={props.name}
       image={image}
+      subname={props.subname}
       longPress={props.secondaryImage ? longPress : undefined}
     />
   );
@@ -111,13 +114,15 @@ export const WeddingParty = (): JSX.Element => {
           {groomsmen.map((groomsman, i) => (
             <div className="sm:flex gap-60">
               <WrappedAvator
-                name={bridesmaids[i].name}
                 image={bridesmaids[i].image}
+                name={bridesmaids[i].name}
+                subname={bridesmaids[i].subname}
                 secondaryImage={bridesmaids[i].secondaryImage}
               />
               <WrappedAvator
-                name={groomsman.name}
                 image={groomsman.image}
+                name={groomsman.name}
+                subname={groomsman.subname}
                 secondaryImage={groomsman.secondaryImage}
               />
             </div>

@@ -1,8 +1,9 @@
 import { LongPress } from "../hooks/useLongPress";
 
 export interface Props {
-  name: string;
   image: string;
+  name: string;
+  subname?: string;
   longPress?: LongPress;
 }
 
@@ -30,6 +31,11 @@ export const Avatar = (props: Props): JSX.Element => {
         <p className="mt-4 text-center text-2xl font-medium group-hover:text-gray-900">
           {props.name}
         </p>
+        {props.subname && (
+          <p className="mt-4 text-center text-l font-medium group-hover:text-gray-900">
+            {props.subname}
+          </p>
+        )}
       </div>
     </div>
   );
