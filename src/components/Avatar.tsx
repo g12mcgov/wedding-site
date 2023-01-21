@@ -10,7 +10,7 @@ export const Avatar = (props: Props): JSX.Element => {
   return (
     <div
       {...props.longPress}
-      className="font-cormorant-garamond flex my-8 items-center justify-center"
+      className="font-cormorant-garamond flex my-8 items-center justify-center [-webkit-touch-callout:none]"
     >
       <div className="w-28">
         <img
