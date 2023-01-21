@@ -1,7 +1,16 @@
-import { Avatar } from "./Avatar";
+import { useState } from "react";
+import useLongPress from "../hooks/useLongPress";
+import { Avatar, Props as AvatarProps } from "./Avatar";
 import { Container } from "./Container";
 
-const groomsmen = [
+interface ImageConfig {
+  name: string;
+  image: string;
+  secondaryImage?: string;
+  subname?: string;
+}
+
+const groomsmen: Array<ImageConfig> = [
   {
     name: "Jonathan Friedman",
     image: "/images/groomsmen/jon.webp",
@@ -22,14 +31,17 @@ const groomsmen = [
   {
     name: "Bradley Naumann",
     image: "/images/groomsmen/brad.webp",
+    secondaryImage: "https://www.dropbox.com/s/54itgnl2zcgw9gw/brad.gif?raw=1",
   },
   {
     name: "George Schmitz",
     image: "/images/groomsmen/george.webp",
+    secondaryImage:
+      "https://www.dropbox.com/s/ltaaqqlpg77y9y6/george.gif?raw=1",
   },
 ];
 
-const bridesmaids = [
+const bridesmaids: Array<ImageConfig> = [
   {
     name: "Payton Donnan",
     image: "/images/bridesmaids/payton.webp",
@@ -56,6 +68,27 @@ const bridesmaids = [
   },
 ];
 
+interface WrappedAvatorProps extends AvatarProps {
+  secondaryImage?: string;
+}
+
+const WrappedAvator = (props: WrappedAvatorProps): JSX.Element => {
+  const [image, setImage] = useState<string>(props.image);
+  const longPress = useLongPress({
+    onStart: () => setImage(props.secondaryImage),
+    onEnd: () => setImage(props.image),
+    ms: 1000,
+  });
+
+  return (
+    <Avatar
+      name={props.name}
+      image={image}
+      longPress={props.secondaryImage ? longPress : undefined}
+    />
+  );
+};
+
 export const WeddingParty = (): JSX.Element => {
   return (
     <Container>
@@ -76,8 +109,16 @@ export const WeddingParty = (): JSX.Element => {
           </div>
           {groomsmen.map((groomsman, i) => (
             <div className="sm:flex gap-60">
-              <Avatar name={bridesmaids[i].name} image={bridesmaids[i].image} />
-              <Avatar name={groomsman.name} image={groomsman.image} />
+              <WrappedAvator
+                name={bridesmaids[i].name}
+                image={bridesmaids[i].image}
+                secondaryImage={bridesmaids[i].secondaryImage}
+              />
+              <WrappedAvator
+                name={groomsman.name}
+                image={groomsman.image}
+                secondaryImage={groomsman.secondaryImage}
+              />
             </div>
           ))}
         </div>

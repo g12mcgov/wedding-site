@@ -1,14 +1,20 @@
-interface Props {
+import { LongPress } from "../hooks/useLongPress";
+
+export interface Props {
   name: string;
   image: string;
+  longPress?: LongPress;
 }
 
 export const Avatar = (props: Props): JSX.Element => {
   return (
-    <div className="font-cormorant-garamond flex my-8 items-center justify-center">
-      <div className="w-24">
+    <div
+      {...props.longPress}
+      className="font-cormorant-garamond flex my-8 items-center justify-center"
+    >
+      <div className="w-28">
         <img
-          className="shadow-xl mx-auto block h-30 w-30 rounded-full"
+          className="shadow-xl mx-auto block max-h-[28] h-28 max-w-[28] w-28 rounded-full"
           src={props.image}
           alt=""
         />
