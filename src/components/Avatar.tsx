@@ -18,7 +18,7 @@ export const Avatar = (props: Props): JSX.Element => {
     <div
       {...props.longPress}
       onContextMenu={handleOnContextMenu}
-      className="font-cormorant-garamond flex my-8 items-center justify-center [-webkit-touch-callout:none]"
+      className="font-cormorant-garamond flex my-8 items-center justify-center [-webkit-touch-callout:none] [-webkit-user-select:none]"
     >
       <div className="w-28">
         <div
