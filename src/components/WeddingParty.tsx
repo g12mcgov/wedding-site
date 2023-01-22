@@ -19,7 +19,8 @@ const groomsmen: Array<ImageConfig> = [
   {
     name: "Philipp Werner",
     image: "/images/groomsmen/phil.webp",
-    secondaryImage: "https://www.dropbox.com/s/wgcim7q931lo7rv/phil.gif?raw=1",
+    secondaryImage:
+      "/images/groomsmen/6da581a2-9a9e-11ed-b534-b394998df227.gif",
   },
   {
     name: "Gaurav Sheni",
@@ -32,13 +33,14 @@ const groomsmen: Array<ImageConfig> = [
   {
     name: "Bradley Naumann",
     image: "/images/groomsmen/brad.webp",
-    secondaryImage: "https://www.dropbox.com/s/54itgnl2zcgw9gw/brad.gif?raw=1",
+    secondaryImage:
+      "/images/groomsmen/0e857c36-9a9e-11ed-876e-afe0bf38d4f2.gif",
   },
   {
     name: "George Schmitz",
     image: "/images/groomsmen/george.webp",
     secondaryImage:
-      "https://www.dropbox.com/s/ltaaqqlpg77y9y6/george.gif?raw=1",
+      "/images/groomsmen/463b98c2-9a9e-11ed-8d0c-ffd6c0d870cb.gif",
   },
 ];
 
