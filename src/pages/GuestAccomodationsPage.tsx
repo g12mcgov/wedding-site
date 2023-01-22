@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Button } from "../components/buttons/Button";
 import { Container } from "../components/Container";
+import { Address } from "../components/details/Address";
 
 export const GuestAccomodationsPage = (): JSX.Element => {
   return (
@@ -28,8 +29,11 @@ export const GuestAccomodationsPage = (): JSX.Element => {
               src="/images/hotels/ritz_carlton.webp"
               alt="The Ritz-Carlton"
             />
-            <p className="max-w-xl mt-5 mx-auto text-2xl">1515 W 3rd Street</p>
-            <p className="max-w-xl mx-auto text-2xl">Cleveland, OH 44113</p>
+            <Address
+              street="1515 W 3rd Street"
+              city="Cleveland, OH"
+              zip="44113"
+            />
             <p className="max-w-xl mt-5 mx-auto text-2xl">
               Room Rate: $289/night
             </p>
@@ -55,8 +59,11 @@ export const GuestAccomodationsPage = (): JSX.Element => {
               src="/images/hotels/hyatt_regency.webp"
               alt="Hyatt Regency Arcade"
             />
-            <p className="max-w-xl mt-5 mx-auto text-2xl">420 Superior Ave</p>
-            <p className="max-w-xl mx-auto text-2xl">Cleveland, OH 44114</p>
+            <Address
+              street="420 Superior Ave"
+              city="Cleveland, OH"
+              zip="44114"
+            />
             <p className="max-w-xl mt-5 mx-auto text-2xl">
               Room Rate: $199/night
             </p>
@@ -91,10 +98,11 @@ export const GuestAccomodationsPage = (): JSX.Element => {
               src="/images/hotels/westin.webp"
               alt="The Westin Cleveland Downtown"
             />
-            <p className="max-w-xl mt-5 mx-auto text-2xl">
-              777 St Clair Ave NE
-            </p>
-            <p className="max-w-xl mx-auto text-2xl">Cleveland, OH 44114</p>
+            <Address
+              street="777 St Clair Ave NE"
+              city="Cleveland, OH"
+              zip="44114"
+            />
             <p className="max-w-xl mt-5 mx-auto text-2xl">
               Room Rate: $219/night
             </p>
@@ -119,8 +127,11 @@ export const GuestAccomodationsPage = (): JSX.Element => {
               src="/images/hotels/hilton_garden_inn.webp"
               alt="Hilton Garden Inn"
             />
-            <p className="max-w-xl mt-5 mx-auto text-2xl">1100 Carnegie Ave</p>
-            <p className="max-w-xl mx-auto text-2xl">Cleveland, OH 44115</p>
+            <Address
+              street="1100 Carnegie Ave"
+              city="Cleveland, OH"
+              zip="44115"
+            />
             <p className="max-w-xl mt-5 mx-auto text-2xl">
               Room Rate: Starting at $189/night
             </p>
