@@ -22,10 +22,10 @@ export const DetailsPage = (): JSX.Element => {
               Friday, June 23, 2023
             </h3>
             <p className="max-w-xl mt-5 mx-auto text-2xl">
-              8:00pm - Welcome Cocktail Party
+              8:30pm - Welcome Cocktail Party
             </p>
             <p className="max-w-xl mt-5 mx-auto text-2xl">Radiant Room</p>
-            <p className="max-w-xl mt-5 mx-auto text-2xl">The Ritz Carlton</p>
+            <p className="max-w-xl mt-5 mx-auto text-2xl">The Ritz-Carlton</p>
             <Address
               street="1515 W 3rd Street"
               city="Cleveland, OH"
