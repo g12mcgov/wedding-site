@@ -14,6 +14,8 @@ const groomsmen: Array<ImageConfig> = [
   {
     name: "Jonathan Friedman",
     image: "/images/groomsmen/jon.webp",
+    secondaryImage:
+      "/images/groomsmen/7f3d21c2-a499-11ed-bc4e-a3190125c6c9.gif",
     subname: "Best Man",
   },
   {
@@ -29,6 +31,8 @@ const groomsmen: Array<ImageConfig> = [
   {
     name: "Smith Collett",
     image: "/images/groomsmen/smith.webp",
+    secondaryImage:
+      "/images/groomsmen/67e2fc12-a49a-11ed-864b-b39cefbdc0d5.gif",
   },
   {
     name: "Bradley Naumann",
