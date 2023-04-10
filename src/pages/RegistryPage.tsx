@@ -25,7 +25,7 @@ export const RegistryPage = (): JSX.Element => {
               </div>
             }
             url="https://donate.stripe.com/6oE8zAgwW9rm2jucMM"
-            clickable={false}
+            clickable={true}
           />
           <RegistryItem
             image="/images/crate_and_barrel.webp"

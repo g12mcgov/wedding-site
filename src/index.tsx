@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 
 import "./index.css";
 import { HomePage } from "./pages/HomePage";
@@ -32,7 +33,29 @@ const App = (): JSX.Element => {
   }, [location]);
 
   return (
-    <>
+    <div className="application">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <meta property="og:site_name" content="Megan & Grant's Wedding" />
+        <meta
+          property="og:title"
+          content="Homepage | Megan & Grant's Wedding"
+        />
+        <meta
+          property="og:description"
+          content="The site for our 2023 wedding in Cleveland, OH."
+        />
+        <meta
+          property="og:image"
+          content="https://www.meganandgrant.love/images/galleries/cultural_gardens/6.webp"
+        />
+        <meta
+          property="og:url"
+          content="https://www.meganandgrant.love/images/galleries/cultural_gardens/6.webp"
+        />
+        <title>Megan & Grant's Wedding</title>
+        <link rel="canonical" href="https://www.meganandgrant.love/" />
+      </Helmet>
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -46,7 +69,7 @@ const App = (): JSX.Element => {
         <Route path="/registry" element={<RegistryPage />} />
       </Routes>
       <Footer />
-    </>
+    </div>
   );
 };
 
