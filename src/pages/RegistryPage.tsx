@@ -16,7 +16,6 @@ export const RegistryPage = (): JSX.Element => {
             overlay={
               <div>
                 <h1>Honeymoon Fund</h1>
-                <h2 className="text-2xl">(Coming Soon)</h2>
                 <img
                   className="absolute w-[150px] m-auto left-0 right-0 mt-28"
                   src="/images/stripe.webp"
