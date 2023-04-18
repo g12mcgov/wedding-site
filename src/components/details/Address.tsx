@@ -19,8 +19,8 @@ export const Address = (props: AddressProps): JSX.Element => {
       target="_blank"
       rel="noreferrer"
     >
-      <p className="max-w-xl mx-auto text-2xl">{street}</p>
-      <p className="max-w-xl mx-auto text-2xl">
+      <p className="max-w-xl mx-auto text-xl">{street}</p>
+      <p className="max-w-xl mx-auto text-xl">
         {city} {zip}
       </p>
     </a>

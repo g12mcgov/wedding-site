@@ -3,6 +3,7 @@ import { Button } from "../components/buttons/Button";
 import { Container } from "../components/Container";
 import { Address } from "../components/details/Address";
 import { Attraction } from "../components/details/Attraction";
+import { Menu } from "../components/details/Menu";
 
 export const DetailsPage = (): JSX.Element => {
   return (
@@ -18,11 +19,13 @@ export const DetailsPage = (): JSX.Element => {
             <h2 className="max-w-xl mt-6 mx-auto text-5xl">
               Weekend Festivities
             </h2>
-            <h3 className="max-w-xl mt-12 mx-auto text-3xl">
+            <h3 className="max-w-xl mt-12 mx-auto text-4xl">
               Friday, June 23, 2023
             </h3>
-            <p className="max-w-xl mt-5 mx-auto text-2xl">
-              8:30pm - Welcome Cocktail Party
+            <p className="m-8">♡</p>
+            <p className="max-w-xl mx-auto text-3xl">8:30pm</p>
+            <p className="max-w-xl mt-4 mx-auto text-2xl">
+              Welcome Cocktail Party
             </p>
             <p className="max-w-xl mt-5 mx-auto text-2xl">Radiant Room</p>
             <p className="max-w-xl mt-5 mx-auto text-2xl">The Ritz-Carlton</p>
@@ -31,21 +34,44 @@ export const DetailsPage = (): JSX.Element => {
               city="Cleveland, OH"
               zip="44113"
             />
-            <h3 className="max-w-xl mt-12 mx-auto text-3xl">
+            <h3 className="max-w-xl mt-12 mx-auto text-4xl">
               Saturday, June 24, 2023
             </h3>
-            <p className="max-w-xl mt-5 mx-auto text-2xl">
-              5:00pm - Wedding Ceremony
-            </p>
+            <p className="m-8">♡</p>
+            <p className="max-w-xl mx-auto text-3xl">5:00pm</p>
+            <p className="max-w-xl mx-auto mt-4 text-2xl">Wedding Ceremony</p>
             <p className="max-w-xl mt-2 mx-auto text-xl italic">
               Cocktails, dinner, and dancing to follow
             </p>
+            <Menu />
             <p className="max-w-xl mt-5 mx-auto text-2xl">The Shoreby Club</p>
             <Address
               street="40 Shoreby Drive"
               city="Bratenahl, OH"
               zip="44108"
             />
+            <p className="m-8">♡</p>
+            <p className="max-w-xl mx-auto text-3xl">11:00pm</p>
+            <p className="max-w-xl mx-auto mt-4 text-2xl">Afterparty</p>
+            <p className="max-w-xl mt-4 mx-auto text-xl italic">
+              Join us for some late night bites and self-serve brews.
+            </p>
+            <p className="max-w-xl mx-auto text-xl italic">
+              Transportation via shuttle bus will be provided.
+            </p>
+            <p className="max-w-xl mt-2 mx-auto text-xl italic">
+              Hosted by Megan & Grant.
+            </p>
+            <a
+              href="https://whistlecle.com/"
+              target={"_blank"}
+              rel="noreferrer"
+            >
+              <p className="max-w-xl mt-5 mx-auto text-2xl">
+                Whistle & Keg Taproom
+              </p>
+            </a>
+            <Address street="818 Huron Rd E" city="Cleveland, OH" zip="44115" />
             <div className="mt-12">
               <Button
                 text="Import to your calendar"
