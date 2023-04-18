@@ -90,7 +90,7 @@ export const Menu = (): JSX.Element => {
                       <p className="text-3xl italic">Sides:</p>
                     </div>
                     <div className="mt-4">
-                      <p className="text-xl">Petite Potato</p>
+                      <p className="text-xl">Petite Potato Gratin</p>
                       <p className="my-4 text-l italic">and</p>
                       <p className="text-xl">Haricot Verts</p>
                     </div>
