@@ -5,7 +5,7 @@ import { NavbarLink } from "./NavbarLink";
 export const Navbar = (): JSX.Element => {
   return (
     <Disclosure as="nav" className="bg-white shadow">
-      {({ open }) => (
+      {({ open, close }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
             <div className="relative flex justify-between h-16">
@@ -22,14 +22,31 @@ export const Navbar = (): JSX.Element => {
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch">
                 <div className="hidden sm:flex sm:space-x-8">
-                  <NavbarLink text="Our Wedding" route="/" />
+                  <NavbarLink
+                    text="Our Wedding"
+                    route="/"
+                    onClick={() => close()}
+                  />
                   <NavbarLink
                     text="Guest Accomodations"
                     route="/guest-accomodations"
+                    onClick={() => close()}
                   />
-                  <NavbarLink text="Details" route="/details" />
-                  <NavbarLink text="Photography" route="/photos" />
-                  <NavbarLink text="Registry" route="/registry" />
+                  <NavbarLink
+                    text="Details"
+                    route="/details"
+                    onClick={() => close()}
+                  />
+                  <NavbarLink
+                    text="Photography"
+                    route="/photos"
+                    onClick={() => close()}
+                  />
+                  <NavbarLink
+                    text="Registry"
+                    route="/registry"
+                    onClick={() => close()}
+                  />
                 </div>
                 <div className="sm:hidden font-cormorant-garamond text-[#a0bbd3] m-auto">
                   <span className="text-3xl">M</span>
@@ -42,22 +59,39 @@ export const Navbar = (): JSX.Element => {
           <Disclosure.Panel className="sm:hidden">
             <div className="flex flex-col pt-2 pb-4 space-y-1">
               <Disclosure.Button>
-                <NavbarLink text="Our Wedding" route="/" />
+                <NavbarLink
+                  text="Our Wedding"
+                  route="/"
+                  onClick={() => close()}
+                />
               </Disclosure.Button>
               <Disclosure.Button>
                 <NavbarLink
                   text="Guest Accomodations"
                   route="/guest-accomodations"
+                  onClick={() => close()}
                 />
               </Disclosure.Button>
               <Disclosure.Button>
-                <NavbarLink text="Details" route="/details" />
+                <NavbarLink
+                  text="Details"
+                  route="/details"
+                  onClick={() => close()}
+                />
               </Disclosure.Button>
               <Disclosure.Button>
-                <NavbarLink text="Photography" route="/photos" />
+                <NavbarLink
+                  text="Photography"
+                  route="/photos"
+                  onClick={() => close()}
+                />
               </Disclosure.Button>
               <Disclosure.Button>
-                <NavbarLink text="Registry" route="/registry" />
+                <NavbarLink
+                  text="Registry"
+                  route="/registry"
+                  onClick={() => close()}
+                />
               </Disclosure.Button>
             </div>
           </Disclosure.Panel>

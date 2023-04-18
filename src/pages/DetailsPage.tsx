@@ -22,7 +22,7 @@ export const DetailsPage = (): JSX.Element => {
             <h3 className="max-w-xl mt-12 mx-auto text-4xl">
               Friday, June 23, 2023
             </h3>
-            <p className="m-8">♡</p>
+            <p className="my-8">♡</p>
             <p className="max-w-xl mx-auto text-3xl">8:30pm</p>
             <p className="max-w-xl mt-4 mx-auto text-2xl">
               Welcome Cocktail Party
@@ -37,7 +37,7 @@ export const DetailsPage = (): JSX.Element => {
             <h3 className="max-w-xl mt-12 mx-auto text-4xl">
               Saturday, June 24, 2023
             </h3>
-            <p className="m-8">♡</p>
+            <p className="my-8">♡</p>
             <p className="max-w-xl mx-auto text-3xl">5:00pm</p>
             <p className="max-w-xl mx-auto mt-4 text-2xl">Wedding Ceremony</p>
             <p className="max-w-xl mt-2 mx-auto text-xl italic">
@@ -50,7 +50,7 @@ export const DetailsPage = (): JSX.Element => {
               city="Bratenahl, OH"
               zip="44108"
             />
-            <p className="m-8">♡</p>
+            <p className="my-8">♡</p>
             <p className="max-w-xl mx-auto text-3xl">11:00pm</p>
             <p className="max-w-xl mx-auto mt-4 text-2xl">Afterparty</p>
             <p className="max-w-xl mt-4 mx-auto text-xl italic">

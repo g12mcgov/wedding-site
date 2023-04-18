@@ -3,11 +3,13 @@ import { NavLink } from "react-router-dom";
 interface Props {
   text: string;
   route: string;
+  onClick: () => void;
 }
 
 export const NavbarLink = (props: Props): JSX.Element => {
   return (
     <NavLink
+      onClick={props.onClick}
       className={({ isActive }) =>
         `hover:border-sky-100 active:border-sky-100 float-left text-bold text-[#a0bbd3] ${
           isActive ? "border-sky-100" : "border-transparent"
