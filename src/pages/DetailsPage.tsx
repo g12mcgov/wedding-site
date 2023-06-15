@@ -54,7 +54,7 @@ export const DetailsPage = (): JSX.Element => {
             <p className="max-w-xl mx-auto text-3xl">11:00pm</p>
             <p className="max-w-xl mx-auto mt-4 text-2xl">Afterparty</p>
             <p className="max-w-xl mt-4 mx-auto text-xl italic">
-              Join us for some late night bites and self-serve brews.
+              Join us for some late night bites and a wall of 50+ craft beers.
             </p>
             <p className="max-w-xl mx-auto text-xl italic">
               Transportation via shuttle bus will be provided.
